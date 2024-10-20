@@ -24,7 +24,5 @@ while 1>0:
     stroka = input("Введите строку: ")
     string = (input("Введите строку: ").upper())
     string_info ()
-
     is_contains()
-
     print(calls)
