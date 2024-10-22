@@ -1,12 +1,25 @@
-#1st program
-print((9**0.5)*5)
-#2st program
-print(9.99 > 9.98 and 1000 != 1000.1)
-#3st program
-print(2*2+2)
-print(2*(2+2))
-print(2*2+2==2*(2+2))
-#4st program
-name='123.456'
-name1=(int(float(name)*10)%10)
-print(name1)
+def send_email (message, recipient, sender = "universiti.help@gmail.com"):
+    if "@" not in recipient and sender:
+        print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
+        
+    if ".com" not in recipient [-4:]:
+        if ".ru" not in recipient [-4:]:
+            if ".net" not in recipient [-4:]:
+                print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
+    if ".net" not in sender [-4:]:
+        if ".ru" not in sender [-4:]:
+            if ".com" not in sender [-4:]:
+                print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
+    if recipient == sender:
+        print("Нельзя отправить письмо самому себе")
+    else:
+        if sender == "universiti.help@gmail.com":
+            print(f'Письмо успешно отправлено с адреса {sender} на адрес {recipient}')
+        if sender == "universiti.help@gmail.com":
+            print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {sender} на адрес {recipient}')    
+            
+
+send_email ("Это сообщение для проверки связи", "vasyok1337@gmail.com")
+send_email ("Вы видите это сообщение, как лучший студент курса!", "urban.fan@mail.ru", sender = "urban.info@gmail.com")
+send_email ("Пожалуйста исправьте задание", "urban.student@mail.ru", sender = "urban.teacher@mail.uk")
+send_email ("Напоминаю самому себе о вебинаре", "urban.teacher@mail.ru", sender = "urban.teacher@mail.ru")
