@@ -13,11 +13,3 @@ print_params(*values_list)
 print_params(**value_dist)
 values_list2 = [3, 'Valeriya']
 print_params(*values_list2, 42)
-
-def append_to_list(item, list_my=None):
-    if list_my is None:
-        list_my = []
-        list_my.append(item)
-        print(list_my)
-
-append_to_list(20,None)
