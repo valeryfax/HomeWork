@@ -1,5 +1,6 @@
 class House:
     def __init__(self, name, floors):
+        self.new_floors = None
         self.name = name
         self.floors = floors
 
